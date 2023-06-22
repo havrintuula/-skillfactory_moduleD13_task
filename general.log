@@ -1,0 +1,8 @@
+2023-04-13 06:26:40,466 INFO autoreload Watching for file changes with StatReloader
+2023-04-13 06:29:53,547 INFO autoreload /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-04-13 06:29:53,830 INFO autoreload Watching for file changes with StatReloader
+2023-04-13 06:36:34,508 INFO autoreload /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-04-13 06:36:34,911 INFO autoreload Watching for file changes with StatReloader
+2023-04-13 06:45:22,087 INFO autoreload /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-04-13 09:01:42,784 INFO autoreload Watching for file changes with StatReloader
+2023-04-13 09:03:31,094 INFO autoreload /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/NewsPaper/settings.py changed, reloading.

@@ -1,0 +1,486 @@
+2023-04-13 06:51:21,457 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreations' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7f7e00c8b3c0>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreations' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 06:51:21,458 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130566
+2023-04-13 07:07:15,740 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreations' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7ff19067be80>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreations' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 07:07:15,742 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=7 HTTP/1.1" 500 130503
+2023-04-13 07:10:00,374 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreations' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7f8d787b45c0>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreations' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 07:10:00,375 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=7 HTTP/1.1" 500 130702
+2023-04-13 08:44:26,574 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7f7dc8b141c0>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 08:44:26,576 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130576
+2023-04-13 08:47:32,031 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fb181412f80>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 08:47:32,035 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 129877
+2023-04-13 08:47:55,289 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fb1908a0d00>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 08:47:55,289 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=6 HTTP/1.1" 500 129740
+2023-04-13 08:50:36,091 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fb488baf640>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 08:50:36,093 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130576
+2023-04-13 08:52:13,083 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fd208c56480>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 08:52:13,085 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130514
+2023-04-13 08:58:50,883 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7f7d48681780>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 08:58:50,885 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130572
+2023-04-13 08:59:59,801 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7f7d8006d980>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 08:59:59,805 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130651
+2023-04-13 09:00:52,363 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fae7098efc0>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 09:00:52,610 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130712
+2023-04-13 09:01:56,265 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fd94952ca80>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 09:01:56,266 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=8 HTTP/1.1" 500 130712
+2023-04-13 09:44:05,654 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreation1' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fb710bff280>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreation1' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 09:44:05,656 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=7 HTTP/1.1" 500 130571
+2023-04-13 09:56:39,389 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fcb40415e80>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 09:56:39,391 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=7 HTTP/1.1" 500 130659
+2023-04-13 10:10:54,089 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fe841270a00>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 10:10:54,090 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=1 HTTP/1.1" 500 130936
+2023-04-13 10:12:56,909 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fe96835ea80>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 10:12:56,911 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=1 HTTP/1.1" 500 130625
+2023-04-13 10:14:50,194 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fc6e8b37700>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationы' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 10:14:50,196 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=1 HTTP/1.1" 500 130713
+2023-04-13 10:35:23,427 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'django.core.exceptions.FieldError'>, FieldError("Cannot resolve keyword 'dateCreationd' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title"), <traceback object at 0x7fab094b4e80>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = super().get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 45, in get_queryset
+    queryset = queryset.order_by(*ordering)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1645, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'dateCreationd' into field. Choices are: author, author_id, categoryType, categorypost, comment, dateCreation, id, postCategory, postcategory, rating, text, title
+2023-04-13 10:35:23,429 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=1 HTTP/1.1" 500 130732
+2023-04-13 10:36:53,322 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/log.py (<class 'NameError'>, NameError("name 'supers' is not defined"), <traceback object at 0x7fe0d971bec0>) Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/Users/albinaalieva/Documents/PycharmProjects/pythonProject10/NewsPaper/news/views.py", line 47, in get_queryset
+    queryset = supers().get_queryset()
+NameError: name 'supers' is not defined
+2023-04-13 10:36:53,323 ERROR /Users/albinaalieva/Documents/PycharmProjects/pythonProject10/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None "GET /news/?page=1 HTTP/1.1" 500 89069
