@@ -1,0 +1,117 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+{% load custom_tags %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+   <h1>Поиск по новостям</h1>
+   <h3>Сегодня: {% current_time '%d %b %Y' %}</h3>
+   <h3>Количество новостей: {{ all_news|length }}</h3>
+
+ {# Добавляем форму, которая объединяет набор полей, которые будут отправляться в запросе #}
+   <form action="" method="get">
+       {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
+       {{ filterset.form.as_p }}
+       {# Добавим кнопку отправки данных формы #}
+       <input type="submit" value="Найти" />
+   </form>
+
+<br>
+{% if perms.news.add_post %}
+<a href="{% url 'news_create' %}">Создать новость</a><br>
+<a href="{% url 'article_create' %}">Создать статью</a><br><br><br>
+{% endif %}
+
+{% if user.is_authenticated %}
+<a href="{% url 'logout' %}">Выйти из аккаунта</a><br><br><br>
+{% else %}
+<a href="{% url 'login' %}">Войти/зарегистрироваться</a><br><br><br>
+
+{% endif %}
+
+
+       <table>
+          <tr>
+               <td>   Заголовок   </td>
+               <td>   Дата публикации   </td>
+               <td>   Тип   </td>
+               <td>   Номер   </td>
+               <td>   Категория   </td>
+               <td>  Описание   </td>
+           </tr>
+
+
+           {% for post in news %}
+           {% for cat in post.postCategory.all %}
+
+           <tr>
+               <td>{{ post.title|censor }}</td>
+               <td>{{ post.dateCreation|date:'d M Y' }}</td>
+               <td>{{ post.categoryType }}</td>
+               <td>{{ post.pk }}</td>
+               <td>{{ cat.name }}</td>
+               <td>{{ post.text|truncatewords:20|censor }}</td>
+               <td><a href='{% url 'post_detail' post.id %}'>Читать</a></td>
+                <td>
+                    {% if perms.news.change_post %}
+                   {% if post.author == request.user.author %}
+                    {% if post.categoryType == 'NW' %}
+                   <a href="{% url 'news_edit' post.id %}">Редактировать новость</a>
+                   {% elif post.categoryType == 'AR' %}
+                   <a href="{% url 'article_edit' post.id %}">Редактировать статью</a>
+                   {% endif %}
+                    {% endif %}
+                    {% endif %}
+
+               </td>
+               <td>
+
+                   {% if perms.news.delete_post %}
+                   {% if post.author == request.user.author %}
+                   {% if post.categoryType == 'NW' %}
+                   <a href="{% url 'news_delete' post.id %}">Удалить новость</a>
+                   {% elif post.categoryType == 'AR' %}
+                   <a href="{% url 'article_delete' post.id %}">Удалить статью</a>
+                   {% endif %}
+                   {% endif %}
+                   {% endif %}
+
+               </td>
+
+           </tr>
+           {% endfor %}
+           {% endfor %}
+
+
+       </table>
+
+<br>
+  {# Добавляем пагинацию на страницу #}
+
+   {# Информация о предыдущих страницах #}
+   {% if page_obj.has_previous %}
+       <a href="?{% url_replace page=1 %}">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {# Информация о текущей странице #}
+   {{ page_obj.number }}
+
+   {# Информация о следующих страницах #}
+   {% if page_obj.has_next %}
+       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+<br><br>
+
+{% endblock content %}

@@ -1,0 +1,61 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+<!-- Название у нас будет Post -->
+{% block title %}
+Post
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам пост, идентификатор которого был передан в url -->
+{% block content %}
+<h1>{{ post.title|censor }}</h1>
+    Дата публикации: {{ post.dateCreation|date:'d M Y' }} <br><br><br>
+    {{ post.text| censor }}
+<br><br><br>
+<a href="{% url 'news' %}">Вернуться к списку новостей и статей</a><br>
+{% if perms.news.add_post %}
+{% if post.author == request.user.author %}
+{% if post.categoryType == 'NW' %}
+                   <a href="{% url 'news_edit' post.id %}">Редактировать новость</a>
+                   {% elif post.categoryType == 'AR' %}
+                   <a href="{% url 'article_edit' post.id %}">Редактировать статью</a>
+                   {% endif %}
+{% endif %}
+{% endif %}
+<br>
+{% if perms.news.add_post %}
+{% if post.author == request.user.author %}
+{% if post.categoryType == 'NW' %}
+                   <a href="{% url 'news_delete' post.id %}">Удалить новость</a>
+                   {% elif post.categoryType == 'AR' %}
+                   <a href="{% url 'article_delete' post.id %}">Удалить статью</a>
+                   {% endif %}
+{% endif %}
+{% endif %}
+{% endblock content %}
+
+
+       <table>
+           <tr>
+               <td>   Заголовок   </td>
+               <td>   Дата публикации   </td>
+               <td>   Тип   </td>
+               <td>   Номер   </td>
+               <td>  Описание   </td>
+           </tr>
+
+
+           {% for post in news %}
+           <tr>
+               <td>{{ post.title|censor }}</td>
+               <td>{{ post.dateCreation|date:'d M Y' }}</td>
+               <td>{{ post.categoryType }}</td>
+               <td>{{ post.pk }}</td>
+               <td>{{ post.text|truncatewords:20|censor }}</td>
+
+           </tr>
+           {% endfor %}
+
+

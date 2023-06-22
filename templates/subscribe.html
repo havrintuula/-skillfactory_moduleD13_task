@@ -1,0 +1,6 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+    <h1 class="text-center">{{message}} {{category}}</h1><br><br>
+    <a href="{% url 'news' %}">Вернуться к списку новостей и статей</a><br>
+{% endblock content %}
